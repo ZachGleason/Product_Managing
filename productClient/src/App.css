@@ -1,0 +1,25 @@
+.form {
+  margin: auto;
+  width: 200px;
+  height: 700px;
+}
+
+.input {
+  width: 200px;
+  height: 30px;
+  margin-top: 15px;
+}
+
+.button {
+  height: 25px;
+  width: 75px;
+  border-radius: 10px;
+  background-color: cadetblue;
+  margin-left: 70px;
+  margin-top: 10px;
+}
+
+.product {
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
