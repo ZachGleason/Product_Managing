@@ -16,11 +16,11 @@ const ProductForm= (props) => {
         description,
     })
         .then(res=>{
-            setProducts([...products, res.data])})
-            // e.target.reset()
-            // setName('')
-            // setPrice('')
-            // setCategory('') 
+            setProducts([...products, res.data])
+            e.target.reset()
+            setTitle('')
+            setPrice('')
+            setDescription('') })
         .catch(err=>console.log(err))
 
 }
