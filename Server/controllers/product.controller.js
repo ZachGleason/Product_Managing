@@ -13,7 +13,17 @@ const showProducts = (req, res) => {
         .catch((err) => console.log(err))
 }
 
+const deleteProduct = ( req, res) => {
+    Product.deleteOne({ _id: req.params.id})
+    .then((deletedProduct) => {
+        res.json(deleteProduct)
+    })
+    .catch(err => res.json(err));
+}
+
+
 module.exports = {
     createProduct,
     showProducts,
+    deleteProduct,
 }

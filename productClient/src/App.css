@@ -12,14 +12,30 @@
 
 .button {
   height: 25px;
-  width: 75px;
+  width: 105px;
   border-radius: 10px;
   background-color: cadetblue;
-  margin-left: 70px;
+  margin-left: 50px;
   margin-top: 10px;
 }
 
 .product {
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.items {
+  height: 300px;
+  width: 200px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.productbox {
+  width: 1600px;
+  height: 1000px;
+  border: 1px solid black;
+  margin-top: -250px;
+  display: inline-block;
+
 }

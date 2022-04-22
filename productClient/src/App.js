@@ -1,12 +1,26 @@
-import React from 'react';
-import ProductForm from './components/PersonForm';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import ProductForm from "./components/PersonForm";
+import DisplayProducts from "./components/DisplayProducts";
+import axios from "axios";
 
-function App() {
+const App = () => {
+  const [products, setProducts] = useState([]); 
+
+  const removeObj = productId => {
+    setProducts(products.filter(product => product._id != productId)); 
+  }
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/allproducts")
+      .then((result) => setProducts(result.data))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
     <>
-      <ProductForm />
-      <h1>Hi</h1>
+      <ProductForm products={products} setProducts={setProducts}/>
+      <DisplayProducts products={products} removeObj={removeObj} />  
     </>
   );
 }
