@@ -21,9 +21,16 @@ const deleteProduct = ( req, res) => {
     .catch(err => res.json(err));
 }
 
+const getOneProduct = (req, res) => {
+    Product.findOne({_id:request.params.id})
+    .then((result) => res.json(result))
+    .catch((err) => res.json(err))
+}
+
 
 module.exports = {
     createProduct,
     showProducts,
     deleteProduct,
+    getOneProduct,
 }

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import '../App.css'
+import {Link} from 'react-router-dom';
 
 const DisplayProducts = (props) => {
         const { removeObj } = props;
@@ -20,6 +21,7 @@ const DisplayProducts = (props) => {
                 <p>Title:   {product.title}</p>
                 <p>Price:   {product.price}</p>
                 <p>Description: {product.description}</p>
+                <Link to={`/product/${product._id}`}> {product.title}'s Page! </Link>
             </div>
             ))}
         </div>
