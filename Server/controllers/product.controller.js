@@ -27,10 +27,17 @@ const getOneProduct = (req, res) => {
     .catch((err) => console.log(err))
 }
 
+const updateProduct = (req, res) => {
+    Product.findOneAndUpdate({_id: req.params.id}, req.body, {new:true})
+        .then(updatedProduct => resp.json(updatedProduct))
+        .catch(err => res.json(err))
+}
+
 
 module.exports = {  
     createProduct,
     showProducts,
     deleteProduct,
     getOneProduct,
+    updateProduct,
 }

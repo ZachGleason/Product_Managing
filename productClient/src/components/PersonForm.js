@@ -4,9 +4,9 @@ import '../App.css'
 
 const ProductForm= (props) => {
     const {products, setProducts} = props;
-    const [ title, setTitle ] = useState("")
-    const [ price, setPrice ] = useState("")
-    const [ description, setDescription ] = useState("")
+    const [ title, setTitle ] = useState("");
+    const [ price, setPrice ] = useState("");
+    const [ description, setDescription ] = useState("");
 
     const submitHandler = (e) => {
         e.preventDefault();

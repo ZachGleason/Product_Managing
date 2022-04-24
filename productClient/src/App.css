@@ -26,18 +26,19 @@
 
 .items {
   height: 300px;
-  width: 200px;
+  width: 250px;
   display: inline-block;
   margin-left: 5px;
+  margin-top: 10px;
 }
 
 .productbox {
-  width: 1600px;
+  margin-left: 0px;
+  width: 1800px;
   height: 1000px;
   border: 1px solid black;
-  margin-top: -250px;
+  margin-top: -350px;
   display: inline-block;
-
 }
 
 .detail {
@@ -48,4 +49,18 @@
   margin: auto;
   margin-top: 20px;
   /* flex-wrap: wrap; */
+}
+
+.home {
+  margin-left: 80px;
+}
+
+.updating {
+  margin-left: 85px;
+
+}
+
+.updating2 {
+  margin-left: 65px;
+
 }
