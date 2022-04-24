@@ -19,7 +19,7 @@ const DisplayProducts = (props) => {
                 <img src={product.imageUrl} alt="image" />
                 <button onClick={(e) => {DeleteItem(product._id)}}>Delete</button>
                 <p>Title:   {product.title}</p>
-                <p>Price:   {product.price}</p>
+                <p>Price: {product.price}</p>
                 <p>Description: {product.description}</p>
                 <Link to={`/product/${product._id}`}> {product.title}'s Page! </Link>
             </div>

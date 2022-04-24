@@ -39,3 +39,13 @@
   display: inline-block;
 
 }
+
+.detail {
+  border: 1px solid black;
+  height: 200px;
+  width: 350px;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  /* flex-wrap: wrap; */
+}

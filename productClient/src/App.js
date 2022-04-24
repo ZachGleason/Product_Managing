@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Fragment } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
 import ProductForm from "./components/PersonForm";
 import DisplayProducts from "./components/DisplayProducts";
@@ -7,6 +7,7 @@ import axios from "axios";
 
 const App = () => {
   const [products, setProducts] = useState([]); 
+
 
   const removeObj = productId => {
     setProducts(products.filter(product => product._id != productId)); 
@@ -23,9 +24,8 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route element={<ProductForm products={products} setProducts={setProducts} />} path="" />
-          <Route element={<DisplayProducts products={products} removeObj={removeObj} />} path= "" />
-          <Route element={<Detail products={products}/>} path="/product/:id"/>     
+          <Route path='/' element={<><ProductForm products={products} setProducts={setProducts}/> <DisplayProducts  products={products} removeObj={removeObj}/></>} />
+          <Route element={<Detail />} path="/product/:id"/>     
         </Routes> 
       </BrowserRouter> 
     </div>
